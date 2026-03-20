@@ -2,6 +2,7 @@
 
 import time
 import sys
+from typing import Optional
 
 
 # Cat frames for waving animation
@@ -45,7 +46,7 @@ CAT_FRAMES = [
 
 def wave_cat(
     speed: float = 0.3,
-    duration: float | None = None,
+    duration: Optional[float] = None,
     repeat: int = 3,
     clear_screen: bool = True,
 ) -> None:
