@@ -2,7 +2,10 @@
 
 import sys
 import time
-from .cat_animation import CAT_FRAMES
+try:
+    from .cat_animation import CAT_FRAMES
+except ImportError:
+    from cat_animation import CAT_FRAMES
 
 # Styles for the 4-frame cycle
 # 0: Bold, 1: Italic/Dim, 2: Hidden/Normal, 3: Cyan
