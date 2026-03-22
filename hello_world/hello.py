@@ -2,7 +2,7 @@
 
 import sys
 import time
-from cat_animation import CAT_FRAMES
+from .cat_animation import CAT_FRAMES
 
 # Styles for the 4-frame cycle
 # 0: Bold, 1: Italic/Dim, 2: Hidden/Normal, 3: Cyan
@@ -12,6 +12,11 @@ MOOD_STYLES = [
     "\033[3m",      # Frame 2: Italic (Blink)
     "\033[1;36m"    # Frame 3: Cyan (Tail Right)
 ]
+
+def hello(name: str = "World") -> str:
+    """Return a greeting message."""
+    return f"Hello, {name}!"
+
 
 def hello_sitting(name: str = "World", repeat: int = 5):
     sys.stdout.write("\033[?25l")

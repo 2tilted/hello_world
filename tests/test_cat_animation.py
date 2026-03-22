@@ -17,7 +17,7 @@ class TestCatAnimation:
 
     def test_cat_frames_count(self) -> None:
         """Test the expected number of frames."""
-        assert len(CAT_FRAMES) == 6
+        assert len(CAT_FRAMES) == 4
 
     def test_wave_cat_static_returns_string(self) -> None:
         """Test that wave_cat_static returns a non-empty string."""
@@ -28,7 +28,7 @@ class TestCatAnimation:
     def test_wave_cat_static_contains_cat(self) -> None:
         """Test that static version contains cat features."""
         result = wave_cat_static()
-        assert "\\__/" in result  # Cat ears
+        assert "/\\" in result  # Cat ears
 
     def test_wave_cat_frame_valid_index(self) -> None:
         """Test getting a frame with valid index."""

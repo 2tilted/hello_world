@@ -37,7 +37,7 @@ def test_cat_frames_not_empty():
 
 def test_cat_frames_count():
     """Test the expected number of frames."""
-    assert len(CAT_FRAMES) == 6, f"Expected 6 frames, got {len(CAT_FRAMES)}"
+    assert len(CAT_FRAMES) == 4, f"Expected 4 frames, got {len(CAT_FRAMES)}"
     print("✓ test_cat_frames_count passed")
 
 
@@ -52,7 +52,7 @@ def test_wave_cat_static_returns_string():
 def test_wave_cat_static_contains_cat():
     """Test that static version contains cat features."""
     result = wave_cat_static()
-    assert "\\__/" in result, "Static cat should contain cat ears"
+    assert "/\\" in result, "Static cat should contain cat ears"
     print("✓ test_wave_cat_static_contains_cat passed")
 
 

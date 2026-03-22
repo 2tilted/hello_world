@@ -39,6 +39,16 @@ CAT_FRAMES = [
     (_/      \\_)"""
 ]
 
+def wave_cat_static() -> str:
+    """Return a static cat ASCII art."""
+    return CAT_FRAMES[0]
+
+
+def wave_cat_frame(index: int) -> str:
+    """Return a specific frame with index wrapping."""
+    return CAT_FRAMES[index % len(CAT_FRAMES)]
+
+
 def wave_cat(speed: float = 0.2, repeat: int = 4):
     sys.stdout.write("\033[?25l") # Hide cursor
     try:
